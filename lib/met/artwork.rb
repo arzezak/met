@@ -2,11 +2,10 @@
 
 module Met
   class Artwork
-    attr_reader :id, :title
+    attr_reader :id, :department, :name, :title
 
-    def initialize(id:, title:)
-      @id = id
-      @title = title
+    def initialize(attributes)
+      attributes.each { |key, value| instance_variable_set("@#{key}", value) }
     end
   end
 end

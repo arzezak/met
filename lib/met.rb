@@ -12,6 +12,11 @@ module Met
     uri = URI("https://collectionapi.metmuseum.org/public/collection/v1/objects/#{id}")
     json = JSON.parse(Net::HTTP.get(uri))
 
-    Artwork.new(id: json["objectID"], title: json["title"])
+    Artwork.new(
+      id: json["objectID"],
+      department: json["department"],
+      name: json["objectName"],
+      title: json["title"]
+    )
   end
 end
