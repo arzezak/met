@@ -14,6 +14,8 @@ module Met
 
     Artwork.new(
       id: json["objectID"],
+      image: json["primaryImage"],
+      preview: json["primaryImageSmall"],
       department: json["department"],
       name: json["objectName"],
       title: json["title"]
