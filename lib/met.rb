@@ -3,6 +3,7 @@
 require "net/http"
 require "json"
 require_relative "met/artwork"
+require_relative "met/cli"
 require_relative "met/version"
 
 module Met
